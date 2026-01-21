@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Remeseiro - AMISTAD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f2f2f2; 
+            --text-color: #333333;
+            --accent-color: #777777;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 40px 20px;
+        }
+
+        header { margin-bottom: 40px; }
+
+        .author-tag {
+            font-size: 0.9rem; 
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .img-box { 
+            width: 98%; 
+            margin: 0 auto; 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .narrative-text {
+            width: 95%;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin: 15px 0 0 0; 
+            color: #444;
+            text-align: center; 
+        }
+
+        .actions { margin: 50px 0; text-align: center; }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: var(--text-color);
+            color: white;
+            border-color: var(--text-color);
+        }
+
+        footer {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .copyright {
+            font-size: 0.55rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+        }
+
+        @media print {
+            @page { margin: 0; }
+            body { background: white; }
+            .container { max-width: 100%; }
+            .page-wrapper { 
+                height: 100vh;
+                page-break-after: always;
+                page-break-inside: avoid;
+                display: flex !important;
+                margin: 0;
+            }
+            .page-wrapper:last-of-type { page-break-after: auto; }
+            .download-btn, .actions { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="page-wrapper">
+            <header>
+                <span class="author-tag">Daniel Remeseiro</span>
+                <h1>AMISTAD</h1>
+            </header>
+            <div class="img-box">
+                <img src="IMAGE_03.jpg" alt="Portada">
+            </div>
+        </div>
+
+        <div class="page-wrapper">
+            <div class="img-box">
+                <img src="IMAGE_01.jpg" alt="La Amistad">
+            </div>
+            <p class="narrative-text">"La amistad es un vínculo..."</p>
+        </div>
+
+        <div class="page-wrapper">
+            <div class="img-box">
+                <img src="IMAGE_02.jpg" alt="Sin Ley">
+            </div>
+            <p class="narrative-text">"...sin ley."</p>
+            
+            <div class="actions">
+                <a href="#" class="download-btn" onclick="window.print(); return false;">
+                    guardar visión en PDF
+                </a>
+            </div>
+
+            <footer>
+                <div class="copyright">
+                    Daniel Remeseiro © Enero de 2026
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+</body>
+</html>
